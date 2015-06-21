@@ -13,7 +13,6 @@ recvlist[1].sort()
 amounts = [0 for each in range(recvlist[0][0])]
 for each in recvlist[1]:
 	amounts[each/recvlist[0][1]] +=1
-
 s.sendall('%s\n'%(str(amounts)))
 recv = s.recv(4096)
 print amounts
